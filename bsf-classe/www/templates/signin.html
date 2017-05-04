@@ -1,0 +1,47 @@
+<ion-view class="signin-view">
+    <div class="logo-mon-cartable-connecte"></div>
+    <div class="signin-pane">
+        <div class="signin-block">
+            <form>
+                <div class="signin-column signin-column-spacing">
+                    <div class="signin-field">
+                        <div class="signin-user"></div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label signin-login" >
+                            <input class="mdl-textfield__input" type="text" autocapitalize="off" ng-model="signin.schoolbag_id" id="schoolbag_id" keyboard-attach>
+                            <label class="mdl-textfield__label" for="schoolbag_id">Identifiant Cartable</label>
+                        </div>
+                    </div>
+                    <div class="signin-field">
+                        <div class="signin-locker"></div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label signin-password">
+                            <input class="mdl-textfield__input" type="password" ng-model="signin.password" id="schoolbag_password" disabled/>
+                            <label class="mdl-textfield__label" for="schoolbag_password">Mot de passe</label>
+                        </div>
+                        <div class="signin-num-pad">
+                            <div ng-click="pwdInsert(1)">1</div>
+                            <div ng-click="pwdInsert(2)">2</div>
+                            <div ng-click="pwdInsert(3)">3</div>
+                            <div ng-click="pwdInsert(4)">4</div>
+                            <div ng-click="pwdInsert(5)">5</div>
+                            <div ng-click="pwdInsert(6)">6</div>
+                            <div ng-click="pwdInsert(7)">7</div>
+                            <div ng-click="pwdInsert(8)">8</div>
+                            <div ng-click="pwdInsert(9)">9</div>
+                            <div ng-click="pwdInsert(0)">0</div>
+                            <span ng-click="pwdReset()">Effacer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="signin-column">
+                    <div class="signin-class-logo"></div>
+                    <button type="submit" class="signin-button button button-block button-stable" ng-click="signIn()">
+                        Connexion
+                    </button>
+                </div>
+                <div ng-repeat="message in error.messages" class="error">
+                    {{message.text}}
+                </div>
+            </form>
+        </div>
+    </div>
+</ion-view>

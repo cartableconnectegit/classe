@@ -1,0 +1,72 @@
+<ion-view class="main-view">
+
+    <div class="menu-pane">
+        <div class="menu-pane-inner">
+            <div class="menu-item">
+                <div class="menu-class-side"></div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-chat" ng-click="toggleChat()">
+                    <span class="chat-badge" ng-show="chatCount">
+                        <span ng-bind="chatCount"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-settings"></div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-stop" ng-click="stop()"></div>
+            </div>
+        </div>
+    </div>
+    <div class="main-pane">
+        <div class="main-inner-pane">
+            <div class="main-inner-icon"></div>
+            <div class="main-inner-header">CAMÉRA ÉLÈVE</div>
+        </div>
+    </div>
+    <div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active spinner"></div>
+    <div class="videoStudent"></div>
+    <audio preload id="notification">
+        <source src="/sound/text_message.mp3" type="audio/mpeg">
+        <source src="/android_asset/www/sound/text_message.mp3" type="audio/mpeg">
+    </audio>
+
+    <ion-footer-bar keyboard-attach class="chat-pane" ng-class="chatPaneCss">
+        <div class="chat-body-pane">
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <ion-scroll delegate-handle="chat" class="chat-messages-list">
+                            <div class="chat-clear" ng-repeat="message in chat.messages track by $index">
+                                <div class="chat-message {{message.css}}">
+                                    <div class="chat-message-content">
+                                        <div ng-repeat="item in message.content track by $index">
+                                            {{item}}
+                                        </div>
+                                    </div>
+                                    <div class="chat-message-arrow {{message.css}}"></div>
+                                </div>
+                            </div>
+                        </ion-scroll>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="input-icon">
+                        <div></div>
+                    </td>
+                    <td class="input-field">
+                        <form ng-submit="sendMessage()">
+                            <div class="item item-input-inset">
+                                <label class="item-input-wrapper">
+                                    <input type="text" id="chatField" placeholder="Tapez votre message" ng-model="chat.field">
+                                </label>
+                            </div>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </ion-footer-bar>
+</ion-view>

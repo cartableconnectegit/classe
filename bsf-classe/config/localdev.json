@@ -1,0 +1,23 @@
+{
+    "apiUrl":"https://api.bistri.com",
+    "apiSettings": {
+        "appId"  : "5edba652",
+        "appKey" : "d30d0410ad2019b854eb181c40ca1a59",
+        "debug"  : true
+    },
+    "serviceUrl":"https://localbsf_server.bistri.com",
+    "stream" : {
+        "width"  : 640,
+        "height" : 480
+    },
+    "frontCam" : {
+        "rtspUrl"  : "rtsp://bistri:bi#33stri@127.0.0.1:xxxx/test"
+    },
+    "backCam"  : {
+        "rtspUrl"  : "rtsp://bistri:bi#33stri@127.0.0.1:xxxx/videoSub",
+        "ptzUrl"   : "http://10.0.1.110:88/CGIProxy.fcgi?",
+        "user"     : "bistri",
+        "password" : "bi#33stri",
+        "delay"    : 3000
+    }
+}

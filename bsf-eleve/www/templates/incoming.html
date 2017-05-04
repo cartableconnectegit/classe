@@ -1,0 +1,24 @@
+<ion-view class="incoming-view">
+
+    <div class="menu-pane">
+        <div class="menu-pane-inner">
+            <div class="menu-item">
+                <div class="menu-student-side"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="incoming-pane">
+        <div class="incoming-accept" ng-click="accept()">
+            <div class="icon-user"></div>
+            <div class="name" ng-bind="userName"></div>
+        </div>
+        <div class="incoming-reject" ng-click="reject()"></div>
+    </div>
+
+    <audio preload loop id="ringing">
+        <source src="/sound/call.mp3" type="audio/mpeg">
+        <source src="/android_asset/www/sound/call.mp3" type="audio/mpeg">
+    </audio>
+
+</ion-view>

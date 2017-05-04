@@ -1,0 +1,879 @@
+
+.mdl-progress > .bar {
+    height              : auto;
+    padding             : 0;
+    background-size     : auto;
+}
+
+.mdl-textfield > .mdl-textfield__input {
+    border-width        : medium medium 1px;
+    border-style        : none none solid;
+    border-color        : rgba( 94, 97, 99, .8 ) /*#5e6163*/;
+}
+
+.mdl-textfield > .mdl-textfield__label {
+    color               : rgba( 94, 97, 99, .8 ) /*#5e6163*/;
+}
+
+.mdl-spinner--single-color div {
+    border-color        : #5e6163;
+}
+
+.modal {
+    top                 : inherit !important;
+    bottom              : 2% !important;
+}
+
+.main-view .spinner,
+.modal .spinner {
+    position            : absolute;
+    margin              : -28px 0 0 -28px;
+    left                : 50%;
+    top                 : 50%;
+    width               : 56px;
+    height              : 56px;
+}
+
+.error {
+    text-align          : center;
+    color               : #f00;
+}
+
+/* Empty. Add your own CSS if you like */
+
+.logo-mon-cartable-connecte {
+    position            : absolute;
+    left                : 0;
+    top                 : 18px;
+    width               : 441px;
+    height              : 116px;
+    background-repeat   : no-repeat;
+    background-image    : url("../img/logo-mon-cartable-connecte-441x116.png");
+}
+
+.menu-pane {
+    display           : flex;
+    align-items       : center;
+    width             : 16%;
+    height            : 100%;
+}
+
+.menu-pane-inner {
+    width             : 100%;
+    height            : 100%;
+    min-height        : 552px;
+}
+
+.menu-item {
+    display           : flex;
+    align-items       : center;
+    width             : 100%;
+    height            : 22%;
+}
+
+.menu-item:first-child {
+    height            : 33%;
+}
+
+.menu-item > div {
+    margin              : 0 auto 0 auto;
+    background-repeat   : no-repeat;
+}
+
+.menu-pane .menu-class-side {
+    width             : 140px;
+    height            : 172px;
+    background-image  : url("../img/icon-class-140x172.png");
+}
+
+.menu-pane .menu-chat {
+    width             : 90px;
+    height            : 90px;
+    background-image  : url("../img/icon-chat-90x90.png");
+}
+
+.menu-pane .menu-settings {
+    width             : 90px;
+    height            : 90px;
+    background-image  : url("../img/icon-settings-90x90.png");
+}
+
+.menu-pane .menu-settings-on {
+    width             : 90px;
+    height            : 90px;
+    background-image  : url("../img/icon-settings-on-90x90.png");
+}
+
+.menu-pane .menu-stop {
+    width             : 90px;
+    height            : 120px;
+    background-image  : url("../img/icon-class-stop-90x120.png");
+}
+
+.menu-pane .menu-stop-off {
+    width             : 90px;
+    height            : 121px;
+    background-image  : url("../img/icon-class-stop-off-90x121.png");
+}
+
+.menu-pane .chat-badge {
+    float             : right;
+    display           : inline-block;
+    width             : 24px;
+    height            : 24px;
+    text-align        : center;
+    color             : #5e6163;
+    background-color  : #e5837a;
+    border            : 1px solid #5e6163;
+    border-radius     : 12px;
+}
+
+
+
+/********************************************************************/
+
+.signin-view {
+    background-color  : #efefee;
+}
+
+.signin-pane {
+    display             : flex;
+    align-items         : center;
+    width               : 100%;
+    height              : 100%;
+}
+
+.signin-column {
+    float: left;
+    width: 300px;
+}
+
+.signin-field {
+    height              : 56px;
+}
+
+.signin-column-spacing {
+    margin-right: 30px;
+}
+
+.signin-field .mdl-textfield {
+    padding: 20px 0 3px 0;
+}
+
+.signin-field .mdl-textfield__label:after {
+    bottom: 2px;
+}
+
+.signin-block {
+    margin              : 0 auto;
+    width               : 630px;
+}
+
+.signin-user {
+    float               : left;
+    padding             : 20px 0px 3px 0;
+    width               : 30px;
+    height              : 56px;
+    background-repeat   : no-repeat;
+    background-position : left center;
+    background-image    : url( "../img/icon-user-20x21.png" ); 
+}
+
+.signin-locker {
+    float               : left;
+    padding             : 20px 0px 3px 0;
+    width               : 30px;
+    height              : 56px;
+    background-repeat   : no-repeat;
+    background-position : left center;
+    background-image    : url( "../img/icon-locker-14x19.png" );
+}
+
+.signin-login,
+.signin-password {
+    float               : right;
+    width               : 270px;
+}
+
+.signin-num-pad {
+    margin-left         : 30px;
+}
+
+.signin-num-pad * {
+    float: left;
+    margin: 0 3px 3px 0;
+    width: 87px;
+    line-height: 57px;
+    color: #efefee;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba( 94, 97, 99, .8 );
+}
+
+.signin-num-pad *:active {
+    background-color: rgba( 94, 97, 99, .3 );
+}
+
+.signin-num-pad span {
+    width: 177px;
+    background-color: rgba( 94, 97, 99, .6 );
+}
+
+.signin-class-logo {
+    margin              : 17px 0;
+    width               : 300px;
+    height              : 271px;
+    background-repeat   : no-repeat;
+    background-position : center top;
+    background-image    : url( "../img/icon-class-220x271.png" );
+}
+
+.signin-view .signin-button {
+    font-size           : 26px;
+    color               : #fff;
+    background-color    : #ffcf27;
+}
+
+.signin-view .signin-button:hover {
+    color               : #fff;
+    background-color    : #ffcf27;
+}
+
+.signin-view .mdl-textfield.is-disabled .mdl-textfield__input {
+    border-bottom-style: solid;
+    border-color: rgba( 94, 97, 99, .8 );
+}
+
+.mdl-textfield.is-disabled .mdl-textfield__label {
+    color: rgba( 94, 97, 99, .8 );
+}
+
+.signin-view .mdl-textfield.is-disabled.is-dirty .mdl-textfield__label {
+    color: #3f51b5;
+}
+
+.signin-view .mdl-textfield.is-disabled .mdl-textfield__input {
+    color: #000;
+}
+
+/********************************************************************/
+
+.home-view {
+    background-color  : #efefee;
+}
+
+.home-pane {
+    display             : flex;
+    align-items         : center;
+    width               : 100%;
+    height              : 100%;
+}
+
+.home-pane .spinner {
+    margin              : 0 auto;
+    width               : 56px;
+    height              : 56px;
+}
+
+/********************************************************************/
+
+.settings-view {
+    background-color  : #efefee;
+}
+
+.settings-view .menu-pane {
+    float            : left;
+}
+
+.settings-view .menu-pane-inner {
+    border-right     : 2px solid #5e6163;
+}
+
+.settings-pane {
+    float               : right;
+    display             : flex;
+    position            : relative;
+    align-items         : center;
+    width               : 84%;
+    height              : 100%;
+}
+
+.settings-steps {
+    display             : flex;
+    align-items         : center;
+    position            : relative;
+    width               : 100%;
+    height              : 90%;
+    min-height          : 625px;
+    background-position : center left;
+    background-repeat   : repeat-x;
+    background-image    : url( "../img/dashed-line-32x3.png" );
+}
+
+.settings-steps-header {
+    position            : absolute;
+    padding             : 10px;
+    left                : 0;
+    top                 : 70px;
+    width               : 100%;
+    height              : 90px;
+    color               : #5e6163;
+    font-size           : 16px;
+    background-repeat   : no-repeat;
+    background-position : center top;
+    background-image    : url( "../img/icon-settings-90x90.png" );
+}
+
+.settings-presence-student {
+    display: inline-block;
+}
+
+.settings-presence-student div {
+    float               : left;
+    margin-right        : 5px;
+    width               : 15px;
+    height              : 15px;
+    border              : 1px solid #5f6264;
+    border-radius       : 15px;
+}
+
+.settings-presence-student div.online {
+    background-color: #89a680;
+}
+
+.settings-presence-student div.offline {
+    background-color: #efefee;
+}
+
+.step {
+    float               : left;
+    margin-top          : 30px;
+    width               : 25%;
+    height              : 186px;
+    background-position : center top;
+    background-repeat   : no-repeat;
+}
+
+.step div {
+    margin              : 0 auto;
+    width               : 140px;
+    height              : 140px;
+}
+
+.step-back-cam {
+    background-image : url( "../img/icon-cam-mobile-156x164.png" );
+}
+
+.step-front-cam {
+    background-image : url( "../img/icon-cam-schoolbag-140x164.png" );
+}
+
+.step-microphone {
+    background-image : url( "../img/icon-microphone-140x164.png" );
+}
+
+.step-go {
+    background-image : url( "../img/icon-go-140x186.png" );
+}
+
+.settings-view .cloud-1 {
+    position          : absolute;
+    left              : 75px;
+    bottom            : 15px;
+    width             : 132px;
+    height            : 110px;
+    background-repeat : no-repeat;
+    background-image  : url("../img/icon-cloud-1-132x110.png");
+    z-index           : 10;
+}
+
+.settings-view .cloud-2 {
+    position          : absolute;
+    left              : 160px;
+    top               : 100px;
+    width             : 88px;
+    height            : 49px;
+    background-repeat : no-repeat;
+    background-image  : url("../img/icon-cloud-3-yellow-88x49.png");
+    z-index           : 11;
+}
+
+.settings-view .cloud-3 {
+    position          : absolute;
+    right             : 100px;
+    top               : 50px;
+    width             : 86px;
+    height            : 72px;
+    background-repeat : no-repeat;
+    background-image  : url("../img/icon-cloud-1-yellow-86x72.png");
+    z-index           : 12;
+}
+
+.settings-view .cloud-4 {
+    position          : absolute;
+    right             : 50px;
+    top               : 30px;
+    width             : 92px;
+    height            : 56px;
+    background-repeat : no-repeat;
+    background-image  : url("../img/icon-cloud-2-blue-92x56.png");
+    z-index           : 13;
+}
+
+.modal-header {
+    width            : 100%;
+    height           : 50px;
+}
+
+.modal-header-badge {
+    position         : relative;
+    margin           : 0 auto;
+    padding-top      : 5px;
+    width            : 100px;
+    height           : 50px;
+    background-color : #efefee;
+    border-radius    : 50px 50px 0 0;
+    z-index          : 5;
+}
+
+.modal-header-icon {
+    margin            : 0px auto;
+    background-repeat : no-repeat;
+    background-image  : url("../img/icon-chat-90x90.png");
+}
+
+.badge-schoolbag-cam {
+    width             : 90px;
+    height            : 109px;
+    background-image  : url( "../img/icon-cam-schoolbag-90x109.png" );
+}
+
+.badge-mobile-cam {
+    width             : 101px;
+    height            : 106px;
+    background-image  : url( "../img/icon-cam-mobile-101x106.png" );
+}
+
+.badge-microphone {
+    width             : 90px;
+    height            : 105px;
+    background-image  : url( "../img/icon-microphone-90x105.png" );
+}
+
+.modal-body {
+    position         : relative;
+    padding          : 70px 50px 50px 50px;
+    height           : 100%;
+    background-color : #efefee;
+    border-radius    : 10px;
+}
+
+.modal-body.video-container {
+    width             : 100% /*580px*/;
+    height            : 480px;
+}
+
+.modal-body.video-container .video-error {
+    display             : none;
+    position            : absolute;
+    margin              : -15px 0 0 -100px;
+    left                : 50%;
+    top                 : 50%;
+    width               : 200px;
+    height              : 30px;
+}
+
+.modal-body.video-container video {
+    width             : 100%;
+    height            : 100%;
+    /*background-color  : #000;*/
+}
+
+.modal-body.microphone-container {
+    width             : 100% /*420px*/;
+    height            : 390px;
+}
+
+.vu-meter {
+    margin              : 18px auto 0 auto;
+    position            : relative;
+    width               : 93px;
+    height              : 252px;
+}
+
+.vu-meter .gauge {
+    position            : absolute;
+    left                : 0;
+    bottom              : 0;
+    height              : 0;
+}
+
+.vu-meter .gauge-background {
+    position            : absolute;
+    left                : 0;
+    bottom              : 0;
+    height              : 100%;
+    opacity             : .2;
+}
+
+.vu-meter .gauge-bar {
+    float               : left;
+    margin              : 0 2px;
+    width               : 27px;
+    height              : 100%;
+    background-repeat   : no-repeat;
+    background-position : left bottom;
+    background-image    : url("../img/microphone-level-27x252.png");
+}
+
+/********************************************************************/
+
+.pending-view {
+    background-color  : #efefee;
+}
+
+.pending-view .cloud-1 {
+    position          : absolute;
+    left              : 75px;
+    top               : 140px;
+    width             : 102px;
+    height            : 86px;
+    background-repeat : no-repeat;
+    background-image  : url("../img/icon-cloud-1-102x86.png");
+    z-index           : 10;
+}
+
+.pending-view .cloud-2 {
+    position          : absolute;
+    right             : 145px;
+    top               : 65px;
+    width             : 86px;
+    height            : 72px;
+    background-repeat : no-repeat;
+    background-image  : url("../img/icon-cloud-1-yellow-86x72.png");
+    z-index           : 11;
+}
+
+.pending-view .cloud-3 {
+    position          : absolute;
+    right             : 105px;
+    bottom            : 145px;
+    width             : 92px;
+    height            : 56px;
+    background-repeat : no-repeat;
+    background-image  : url("../img/icon-cloud-2-blue-92x56.png");
+    z-index           : 12;
+}
+
+.pending-pane {
+    float               : right;
+    display             : flex;
+    align-items         : center;
+    width               : 100%;
+    height              : 100%;
+}
+
+.pending-animation {
+    display             : flex;
+    align-items         : center;
+    margin              : 0 auto;
+    width               : 500px;
+}
+
+.pending-progress {
+    float               : left;
+    width               : 220px;
+}
+
+.pending-class {
+    float               : left;
+    margin-top          : 30px;
+    width               : 140px;
+    height              : 172px;
+    background-repeat   : no-repeat;
+    background-image    : url("../img/icon-class-140x172.png");
+}
+
+.pending-student {
+    float               : left;
+    margin-top          : 30px;
+    width               : 140px;
+    height              : 173px;
+    background-repeat   : no-repeat;
+    background-image    : url("../img/icon-student-140x173.png");
+}
+
+.pending-stop {
+    position            : absolute;
+    left                : 50px;
+    bottom              : 25px;
+    width               : 90px;
+    height              : 120px;
+    background-repeat   : no-repeat;
+    background-image    : url("../img/icon-class-stop-90x120.png");
+}
+
+/********************************************************************/
+
+.incoming-view .menu-pane {
+    float             : left;
+}
+
+.incoming-view {
+    background-color  : #efefee;
+}
+
+.incoming-pane {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.incoming-accept {
+    position            : relative;
+    margin              : 0 auto;
+    width               : 362px;
+    height              : 402px;
+    background-repeat   : no-repeat;
+    background-position : center center;
+    background-image    : url("../img/icon-accept-call-322x322.png");
+}
+
+.incoming-accept .icon-user {
+    position            : absolute;
+    right               : 0;
+    top                 : 0;
+    width               : 120px;
+    height              : 120px;
+    background-repeat   : no-repeat;
+    background-image    : url("../img/icon-class-120x120.png");
+    z-index             : 10;
+}
+
+.incoming-accept .name {
+    position            : absolute;
+    width               : 100%;
+    bottom              : 0px;
+    left                : 0px;
+    text-align          : center;
+}
+
+.incoming-reject {
+    position            : absolute;
+    right               : 75px;
+    bottom              : 50px;
+    width               : 157px;
+    height              : 157px;
+    background-repeat   : no-repeat;
+    background-image    : url("../img/icon-reject-call-157x157.png");
+}
+
+/********************************************************************/
+
+.videoStudent {
+    position         : absolute;
+    left             : 0;
+    top              : 0;
+    width            : 100%;
+    height           : 100%;
+    z-index          : 1;
+}
+
+.videoStudent video {
+    width            : 100%;
+    /*height           : 100%;*/
+}
+
+.main-view {
+    background-color : #efefee;
+}
+
+.main-view .menu-pane {
+    position         : absolute;
+    left             : 0;
+    top              : 0;
+    background-color : rgba( 239, 239, 238, 0.6 );
+    z-index          : 99;
+}
+
+.main-pane {
+    float               : right;
+    display             : flex;
+    position            : relative;
+    align-items         : center;
+    width               : 84%;
+    height              : 100%;
+    z-index             : 100;
+}
+
+.main-inner-pane {
+    display             : flex;
+    align-items         : center;
+    position            : relative;
+    width               : 100%;
+    height              : 90%;
+    min-height          : 625px;
+}
+
+.main-inner-icon {
+    position            : absolute;
+    left                : 0;
+    top                 : 70px;
+    height              : 90px;
+    width               : 100%;
+    background-repeat   : no-repeat;
+    background-position : center top;
+    background-image    : url( "../img/icon-cam-raw-90x90.png" );
+    opacity             : .6;
+}
+
+.main-inner-header {
+    position            : absolute;
+    padding             : 10px;
+    left                : 0;
+    top                 : 70px;
+    width               : 100%;
+    height              : 90px;
+    color               : #fff;
+    font-size           : 16px;
+}
+
+/********************************************************************/
+
+.chat-pane {
+
+    background-color: transparent;
+    padding: 0;
+    display: block;
+    left: auto;
+
+    position         : absolute;
+    right            : -10000px;
+    bottom           : -10000px;
+    width            : 84%;
+    height           : 250px;
+    border-left      : 1px solid #000;
+    z-index          : 110;
+}
+
+.settings-view .chat-pane {
+    border-left      : 0;
+}
+
+.chat-pane-visible {
+    right            : 0;
+    bottom           : 0;
+}
+
+.chat-body-pane {
+    padding-top      : 10px;
+    height           : 100%;
+    background-color : rgba( 239, 239, 238, 0.6 );
+}
+
+.chat-body-pane table {
+    width            : 100%;
+    height           : 100%;  
+}
+
+.chat-body-pane .input-field {
+    height           : 60px;
+    vertical-align   : middle;
+}
+
+.chat-body-pane .input-field  input {
+    width: 100%;
+}
+
+.chat-body-pane .input-field .item-input-wrapper {
+    height           : 40px;
+    border           : 2px solid rgb(94, 97, 99);
+}
+
+.chat-body-pane .item {
+    border-width     : 0;
+    background-color : transparent;
+}
+
+.chat-messages-list {
+    height           : 180px;
+    padding          : 0 10px 0 10px;
+}
+
+.chat-clear {
+    clear            : both;
+}
+
+.chat-message {
+    min-width        : 20%;
+    max-width        : 50%;
+}
+
+.chat-message.chat-local {
+    float            : right;
+}
+
+.chat-message.chat-remote {
+    float            : left;
+}
+
+.chat-message-content {
+    overflow         : hidden;
+    padding          : 5px 10px 0 10px;
+    width            : 100%;
+    color            : #575d60;
+    border-radius    : 10px;
+}
+
+.chat-message-content div {
+    margin-bottom    : 5px;
+}
+
+.chat-local .chat-message-content {
+    background-color : #fcebb3;
+}
+
+.chat-remote .chat-message-content {
+    background-color : #8ecbe0;
+}
+
+.chat-message-arrow {
+    width            : 0; 
+    height           : 0; 
+    border-left      : 10px solid transparent;
+    border-right     : 10px solid transparent; 
+}
+
+.chat-local .chat-message-arrow {
+    float            : right;
+    margin-right     : 30px;
+    border-top       : 8px solid #fcebb3;
+}
+
+.chat-remote .chat-message-arrow {
+    float            : left;
+    margin-left      : 30px;
+    border-top       : 8px solid #8ecbe0;
+}
+
+.input-icon {
+    width               : 41px;
+}
+
+.input-icon div {
+    margin              : 10px 0 10px 10px;
+    width               : 31px;
+    height              : 40px;
+    background-repeat   : no-repeat;
+    background-position : center center;
+    background-image    : url("../img/icon-pen-31x40.png");
+}
+
+.offline-warning {
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+}
+

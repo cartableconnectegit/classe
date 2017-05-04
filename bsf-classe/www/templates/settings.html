@@ -1,0 +1,153 @@
+<ion-view class="settings-view">
+
+    <div class="menu-pane">
+        <div class="menu-pane-inner">
+            <div class="menu-item">
+                <div class="menu-class-side"></div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-chat" ng-click="toggleChat()">
+                    <span class="chat-badge" ng-show="chatCount">
+                        <span ng-bind="chatCount"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-settings-on"></div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-stop-off" ng-click="logout()"></div>
+            </div>
+        </div>
+    </div>
+    <div class="settings-pane">
+
+        <div class="cloud-1"></div>
+        <div class="cloud-2"></div>
+        <div class="cloud-3"></div>
+        <div class="cloud-4"></div>
+
+        <div class="settings-steps">
+            <div class="settings-steps-header">RÉGLAGES | 
+                <div class="settings-presence-student">
+                    <div ng-class="chatPresence"></div>
+                    <span ng-bind="studentName"></span>
+                </div>
+            </div>
+            <div class="step step-front-cam">
+                <div ng-click="showFrontVideoModal()"></div>
+            </div>
+            <div class="step step-back-cam">
+                <div ng-click="showBackVideoModal()"></div>
+            </div>
+            <div class="step step-microphone">
+                <div ng-click="showMicModal()"></div>
+            </div>
+            <div class="step step-go">
+                <div ng-click="go()"></div>
+            </div>
+        </div>
+    </div>
+
+    <audio preload id="notification_settings">
+        <source src="/sound/text_message.mp3" type="audio/mpeg">
+        <source src="/android_asset/www/sound/text_message.mp3" type="audio/mpeg">
+    </audio>
+
+    <ion-footer-bar keyboard-attach ng-class="chatPaneCss">
+        <div class="chat-body-pane">
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <ion-scroll delegate-handle="chat" class="chat-messages-list">
+                            <div class="chat-clear" ng-repeat="message in chat.messages track by $index">
+                                <div class="chat-message {{message.css}}">
+                                    <div class="chat-message-content">
+                                        <div ng-repeat="item in message.content track by $index">
+                                            {{item}}
+                                        </div>
+                                    </div>
+                                    <div class="chat-message-arrow {{message.css}}"></div>
+                                </div>
+                            </div>
+                        </ion-scroll>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="input-icon">
+                        <div></div>
+                    </td>
+                    <td class="input-field">
+                        <form ng-submit="sendMessage()">
+                            <div class="item item-input-inset">
+                                <label class="item-input-wrapper">
+                                    <input type="text" id="chatField" placeholder="Tapez votre message" ng-model="chat.field">
+                                </label>
+                            </div>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </ion-footer-bar>
+
+    <script id="frontVideoModal" type="text/ng-template">
+        <ion-modal-view style="width: 60% /*580px*/; height: 530px; background-color: transparent;">
+            <ion-content>
+                <div class="modal-header">
+                    <div class="modal-header-badge">
+                        <div class="modal-header-icon badge-schoolbag-cam"></div>
+                    </div>
+                </div>
+                <div class="modal-body video-container">
+                    <div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active front-video spinner"></div>
+                    <div class="front-video video-error">Caméra Sac non trouvée</div>
+                    <video id="frontVideoSettings" autoplay></video>
+                </div>
+            </ion-content>
+        </ion-modal-view>
+    </script>
+
+    <script id="backVideoModal" type="text/ng-template">
+        <ion-modal-view style="width: 60% /*580px*/; height: 530px; background-color: transparent;">
+            <ion-content>
+                <div class="modal-header">
+                    <div class="modal-header-badge">
+                        <div class="modal-header-icon badge-mobile-cam"></div>
+                    </div>
+                </div>
+                <div class="modal-body video-container">
+                    <div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active back-video spinner"></div>
+                    <div class="back-video video-error">Caméra Mobile non trouvée</div>
+                    <video id="backVideoSettings" autoplay></video>
+                </div>
+            </ion-content>
+        </ion-modal-view>
+    </script>
+
+    <script id="micModal" type="text/ng-template">
+        <ion-modal-view style="width: 60% /*420px*/; height: 450px; background-color: transparent;">
+            <ion-content>
+                <div class="modal-header">
+                    <div class="modal-header-badge">
+                        <div class="modal-header-icon badge-microphone"></div>
+                    </div>
+                </div>
+                <div class="modal-body microphone-container">
+                    <div class="vu-meter">
+                        <div id="vuMeterLevel" class="gauge">
+                            <div class="gauge-bar"></div>
+                            <div class="gauge-bar"></div>
+                            <div class="gauge-bar"></div>
+                        </div>
+                        <div class="gauge-background">
+                            <div class="gauge-bar"></div>
+                            <div class="gauge-bar"></div>
+                            <div class="gauge-bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </ion-content>
+        </ion-modal-view>
+    </script>
+</ion-view>

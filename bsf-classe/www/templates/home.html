@@ -1,0 +1,17 @@
+<ion-view class="home-view">
+    <div class="home-pane">
+        <div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active spinner"></div>
+    </div>
+    <script id="infoError" type="text/ng-template">
+        <ion-modal-view style="width: 60%; height: 530px; background-color: transparent;">
+            <ion-content>
+                <div class="modal-body video-container">
+                    <div class="error">ERREUR:</div>
+                    <div ng-repeat="error in errors" class="error">
+                        {{error.text}}
+                    </div>
+                </div>
+            </ion-content>
+        </ion-modal-view>
+    </script>
+</ion-view>
