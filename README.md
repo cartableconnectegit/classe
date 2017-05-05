@@ -1,8 +1,8 @@
-***ATTENTION***
+## ATTENTION
 * Ne travaillez pas directement sur la branche dev, tirez vous une branche perso depuis la branch dev
 * Votre branche s'appellera "votre-nom/la-feature" ex: rabbou/interface
 * Faites une pull request avant de merge votre branche dans dev
-***ATTENTION***
+## ATTENTION
 
 * Pré-requis
 Installation de cordova et ionic
