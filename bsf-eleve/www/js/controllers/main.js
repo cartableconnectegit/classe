@@ -1,5 +1,6 @@
-appControllers.controller ( 'MainCtrl', function ( $window, $rootScope, $scope, $state, $ionicScrollDelegate, $timeout, UserService, MediaService, VideoService, ApiService, GlobalChatService, frontCam, backCam )
+appControllers.controller ( 'MainCtrl', function ( $window, $rootScope, $scope, $state, $ionicScrollDelegate, $timeout, UserService, MediaService, VideoService, ApiService, GlobalChatService, frontCam, backCam, $ionicModal )
 {
+	
     componentHandler.upgradeDom();
 
     $scope.chat = {
@@ -213,4 +214,60 @@ appControllers.controller ( 'MainCtrl', function ( $window, $rootScope, $scope, 
             $window.plugins.insomnia.allowSleepAgain ();
         }
     } );
+
+	
+	$ionicModal.fromTemplateUrl( 'captureModal', {
+        scope     : $scope,
+        animation : 'slide-in-up'
+    } ).then( function( modal )
+    {
+        $scope.captureModal = modal;
+    } );
+	
+	$scope.showCapture = function ()
+    {
+		 $scope.captureModal.show();
+       /* var isVideoEnabled = MediaService.getVideo ();
+
+        $scope.captureModal.show();
+
+        if ( isVideoEnabled )
+        {
+            ApiService.setVideoTestStream ( 'videoSettings' );
+        }*/
+    }
+	
+	$scope.cancelCapture = function() {
+      $scope.captureModal.hide();
+   };
+   
+	
+   
+   $ionicModal.fromTemplateUrl( 'editCaptureModal', {
+        scope     : $scope,
+        animation : 'slide-in-up'
+    } ).then( function( modal )
+    {
+        $scope.editCaptureModal = modal;
+    } );
+	
+	
+	$scope.editCapture = function ()
+    {
+		$scope.captureModal.hide();
+		$scope.editCaptureModal.show();
+		var canvas = document.getElementById("signatureCanvas");
+		var signaturePad = new SignaturePad(canvas);
+		signaturePad.fromDataURL('bg.jpg')		
+    }
+	
+	$scope.cancelEditCapture = function() {
+		//var canvas = document.getElementById("signatureCanvas");
+		//var signaturePad = new SignaturePad(canvas);
+		//signaturePad.clear();
+		//signaturePad.fromDataURL('img/bg.jpg')
+		$scope.editCaptureModal.hide();
+   };
+	
+	
 } );

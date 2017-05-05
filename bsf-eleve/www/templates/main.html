@@ -14,6 +14,11 @@
                     </span>
                 </div>
             </div>
+			<!-- Start modif -->
+			<div class="menu-item">
+                <div class="menu-capture"  ng-click="showCapture()"></div>
+            </div>
+			<!-- End modif -->
             <div class="menu-item">
                 <div class="menu-settings"></div>
             </div>
@@ -88,5 +93,52 @@
             </table>
         </div>
     </ion-footer-bar>
+	
+	<script id="captureModal" type="text/ng-template">
+        <ion-modal-view style="width: 60% /*580px*/; height: 530px; background-color: transparent;">
+            <ion-content>
+                <div class="modal-header">
+                    <div class="modal-header-badge">
+                        <div class="modal-header-icon badge-cam"></div>
+						<p>Capture à afficher</p>
+                    </div>
+                </div>
+                <div class="modal-body video-container">
+                   <!-- <div style="width: 100%; height: 100%; background-color: #c0c0c0;" ng-show="showVideoOn"></div>
+                    <div id="videoSettings"></div>-->
+                    <div style="position:absolute; width: 100%; left: 0; bottom:20px; text-align: center">
+						<h1>Veux-tu...</h1>
+						<a class='button' style="background-color:#E6847A" ng-click='cancelCapture()'>Annuler</a>
+						<a class='button' style="background-color:#7EC7DE" ng-click='editCapture()'>Modifier</a>
+						<a class='button' style="background-color:#89A680" ng-click='saveCapture()'>Sauvegarder</a>
+                    </div>
+                </div>
+            </ion-content>
+        </ion-modal-view>
+    </script>
+	
+	
+	<script id="editCaptureModal" type="text/ng-template">
+        <ion-modal-view style="width: 60% /*580px*/; height: 530px; background-color: transparent;">
+            <ion-content scroll='false'>
+                <div class="modal-header">
+                    <div class="modal-header-badge">
+                        <div class="modal-header-icon badge-cam"></div>
+						<p>Edit capture</p>
+						<canvas id='signatureCanvas' width='300' height='180' style='border: 1px solid black;'></canvas>
+                    </div>
+                </div>
+                <div class="modal-body video-container">
+                    <div style="position:absolute; width: 100%; left: 0; bottom:20px; text-align: center">
+						<h1>OKOK</h1>
+						<a class='button' style="background-color:#E6847A" ng-click='cancelEditCapture()'>Annuler</a>
+						<a class='button' style="background-color:#7EC7DE" ng-click=''>Modifier</a>
+						<a class='button' style="background-color:#89A680" ng-click=''>Sauvegarder</a>
+                    </div>
+                </div>
+            </ion-content>
+        </ion-modal-view>
+    </script>
+	
 
 </ion-view>

@@ -69,7 +69,8 @@
     display           : flex;
     align-items       : center;
     width             : 100%;
-    height            : 22%;
+    /*height            : 22%;*/
+	margin-top		  : 10%;
 }
 
 .menu-item:first-child {
@@ -92,6 +93,12 @@
     width             : 90px;
     height            : 90px;
     background-image  : url("../img/icon-chat-90x90.png");
+}
+
+.menu-pane .menu-capture {
+    width             : 90px;
+    height            : 90px;
+    background-image  : url("../img/icon-capture-90x90.png");
 }
 
 .menu-pane .menu-settings {
